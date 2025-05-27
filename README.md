@@ -16,14 +16,13 @@
 
 ### Graph Construction
 - Builds directed/undirected graphs from MeSH or SNOMED using `PAR`, `RB`, `RN`, `CHD`, and `is_a`.
-- Supports hierarchical trees via `MRSAT.MN`.
 - Visualizes paths with PyVis; optional Neo4j export for interactive exploration.
 
 ### Semantic Similarity
 - Implements path-based metrics: Path Length, Wu-Palmer, LCH.
 - Supports IC-based metrics: Resnik, Lin, Jiang-Conrath.
 - Adds embedding-based methods: Word2Vec, GloVe, Transformer (e.g., PubMedBERT).
-- Outputs are normalized and compatible with heatmap comparison.
+- Outputs can be normalized and compatible with heatmap comparison.
 
 ### Concept Linking & LCS
 - Resolves CUIs from terms or accepts direct input.
@@ -45,10 +44,10 @@
 
 ### Installation
 
-You can install `PyUMLS-Similarity` via pip:
+You can install `pyumls-similarity` via pip:
 
 ```bash
-pip install PyUMLS-Similarity
+pip install pyumls-similarity
 ```
 
 You must also have access to a local UMLS installation and corresponding MySQL database. Additional setup steps are outlined below.
@@ -96,7 +95,7 @@ Install Neo4j and run a graph database locally or in the cloud. The engine suppo
 Start by importing the module like so:
 
 ```python
-from PyUMLS-Similarity import UMLSSemanticEngine
+from pyumls_similarity import UMLSSemanticEngine
 ```
 
 Then, you can use the routines below to get you started. Start by initiating the connection to the MySQL UMLS database. Load the SemGroups.txt file.  
@@ -203,6 +202,13 @@ umls_utils.plot_all_similarity_metrics_heatmap(df_results, max_depth=18, normali
 
 <img src="https://raw.githubusercontent.com/victormurcia/pyramedic-umls/main/images/heatmap1.png" style="max-width:100%; height:auto;"/>
 
+Or you can also visualize radar plots for the concept pairs as shown here:
+
+```python
+umls_utils.plot_all_similarity_metrics_radar(df_results, max_depth=18, normalize=True, plots_per_row=5)
+```
+
+<img src="https://raw.githubusercontent.com/victormurcia/pyramedic-umls/main/images/radar.png" style="max-width:100%; height:auto;"/>
 Or you can also visualize radar plots for the concept pairs as shown here:
 
 ```python
