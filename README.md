@@ -1,9 +1,9 @@
 # PyUMLS-Similarity
 
-                                ╔════════════════════════════════════════════════════════╗
-                                ║                    PYUMLS SIMILARITY                   ║
-                                ║            Unified Medical Language System Tools       ║
-                                ╚════════════════════════════════════════════════════════╝
+                            ╔════════════════════════════════════════════════════════╗
+                            ║                    PYUMLS SIMILARITY                   ║
+                            ║            Unified Medical Language System Tools       ║
+                            ╚════════════════════════════════════════════════════════╝
 **PyUMLS-Similarity** is a semantic similarity engine for biomedical concept analysis, built on the UMLS. It supports transformer-based embeddings, various similarity metrics (e.g. path, LCH, Resnik, Lin), and interactive exploration of concept relationships. It aims to facilitate the integration of these methods into existing NLP workflows.
 
 ---
