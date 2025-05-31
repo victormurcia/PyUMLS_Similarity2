@@ -209,10 +209,3 @@ umls_utils.plot_all_similarity_metrics_radar(df_results, max_depth=18, normalize
 ```
 
 <img src="https://raw.githubusercontent.com/victormurcia/pyramedic-umls/main/images/radar.png" style="max-width:100%; height:auto;"/>
-Or you can also visualize radar plots for the concept pairs as shown here:
-
-```python
-umls_utils.plot_all_similarity_metrics_radar(df_results, max_depth=18, normalize=True, plots_per_row=5)
-```
-
-<img src="https://raw.githubusercontent.com/victormurcia/pyramedic-umls/main/images/radar.png" style="max-width:100%; height:auto;"/>
